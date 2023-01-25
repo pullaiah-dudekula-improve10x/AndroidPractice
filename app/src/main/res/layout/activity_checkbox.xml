@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/submit_btn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckboxActivity">
+
+    <CheckBox
+        android:id="@+id/checkBox1_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:text="Pizza"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2_cb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <CheckBox
+        android:id="@+id/checkBox2_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Coffe"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox3_cb"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox1_cb"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox1_cb"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1_cb" />
+
+    <CheckBox
+        android:id="@+id/checkBox3_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="burger"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4_cb"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox2_cb"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox2_cb"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2_cb" />
+
+    <CheckBox
+        android:id="@+id/checkBox4_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="samosa"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox3_cb"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox3_cb"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3_cb" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="submit"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4_cb" />
+</androidx.constraintlayout.widget.ConstraintLayout>
