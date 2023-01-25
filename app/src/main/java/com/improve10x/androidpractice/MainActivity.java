@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         handleToast();
         handleCustomToast();
         handleTaggedBtn();
+        handleRadioButton();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -47,5 +48,16 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, TaggedButtonActivity.class);
             startActivity(intent);
         });
+    }
+
+    private void handleRadioButton() {
+        binding.radioButtonBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, RadioButtonsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleRatingBar() {
+
     }
 }
