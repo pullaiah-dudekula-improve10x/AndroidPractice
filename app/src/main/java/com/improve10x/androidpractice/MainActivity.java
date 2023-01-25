@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         handleCustomToast();
         handleTaggedBtn();
         handleRadioButton();
+        handleRatingBar();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -58,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleRatingBar() {
-
+        binding.ratingbarBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, RatingbarActivity.class);
+            startActivity(intent);
+        });
     }
 }
