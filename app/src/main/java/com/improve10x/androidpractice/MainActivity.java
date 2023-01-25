@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         handleRadioButton();
         handleRatingBar();
         handleCheckbox();
+        handlerSeekbar();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -69,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleCheckbox() {
         binding.chechboxBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CheckboxActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handlerSeekbar() {
+        binding.seekbarBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SeekbarActivity.class);
             startActivity(intent);
         });
     }
