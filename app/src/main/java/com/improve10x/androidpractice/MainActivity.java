@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         handleDatePicker();
         handleTimePicker();
         handleProgressbar();
+        handleVerticalScrollView();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleTaggedBtn() {
-        binding.taggedBtn.setOnClickListener(view -> {
+        binding.toggedBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, TaggedButtonActivity.class);
             startActivity(intent);
         });
@@ -103,5 +104,16 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, ProgressbarActivity.class);
             startActivity(intent);
         });
+    }
+
+    private void handleVerticalScrollView() {
+        binding.verticalScrollViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, VerticalScrollViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleHorizontalScrollbar() {
+
     }
 }
