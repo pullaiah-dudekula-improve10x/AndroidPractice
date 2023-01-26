@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         handleRatingBar();
         handleCheckbox();
         handlerSeekbar();
+        handleDatePicker();
+        handleTimePicker();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -78,6 +80,21 @@ public class MainActivity extends AppCompatActivity {
         binding.seekbarBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, SeekbarActivity.class);
             startActivity(intent);
+        });
+    }
+
+    private void handleDatePicker() {
+        binding.datepickerBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, DatePickerActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleTimePicker() {
+        binding.timePickerBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, TimePickerActivity.class);
+            startActivity(intent);
+
         });
     }
 }
