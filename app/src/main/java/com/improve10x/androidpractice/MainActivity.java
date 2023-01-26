@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         handleTimePicker();
         handleProgressbar();
         handleVerticalScrollView();
+        handleHorizontalScrollbar();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -114,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleHorizontalScrollbar() {
-
+        binding.horizontalSb.setOnClickListener(view -> {
+            Intent intent = new Intent(this, HorizontalScrollviewActivity.class);
+            startActivity(intent);
+        });
     }
 }
