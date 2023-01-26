@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         handlerSeekbar();
         handleDatePicker();
         handleTimePicker();
+        handleProgressbar();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -94,7 +95,13 @@ public class MainActivity extends AppCompatActivity {
         binding.timePickerBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, TimePickerActivity.class);
             startActivity(intent);
+        });
+    }
 
+    private void handleProgressbar() {
+        binding.progressbarBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ProgressbarActivity.class);
+            startActivity(intent);
         });
     }
 }
