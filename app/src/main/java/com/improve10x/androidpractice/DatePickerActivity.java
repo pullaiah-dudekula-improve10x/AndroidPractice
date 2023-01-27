@@ -29,7 +29,7 @@ public class DatePickerActivity extends AppCompatActivity {
 
     private String getData(int date, int month, int year) {
         String currentDate = String.valueOf(date);
-        String currentMonth = String.valueOf(month);
+        String currentMonth = String.valueOf(month + 1);
         String currentYear = String.valueOf(year);
         String data = "Current Date : " + currentDate + "-" + currentMonth + "-" + currentYear;
         return data;
