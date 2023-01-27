@@ -18,36 +18,43 @@ public class CheckboxActivity extends AppCompatActivity {
         binding = ActivityCheckboxBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().setTitle("Checkbox");
-        showCheckbox();
+        handleOrder();
     }
 
-    private void showCheckbox() {
+    private void handleOrder() {
         binding.submitBtn.setOnClickListener(view -> {
-            int total = 0;
-            result = new StringBuilder();
-            result.append("selectedItems");
-            if(binding.checkBox1Cb.isChecked()) {
-                result.append("\nPizza 100rs");
-                total+= 100;
-            }
-
-            if(binding.checkBox2Cb.isChecked()) {
-                result.append("\nCoffe 50rs");
-                total+=50;
-            }
-
-            if(binding.checkBox3Cb.isChecked()) {
-                result.append("\nburger 25rs");
-                total+= 25;
-            }
-
-            if(binding.checkBox4Cb.isChecked()) {
-                result.append("\nsamosa 10rs");
-                total+= 10;
-            }
-
-            result.append("\nTotal: " + total + "rs");
-            Toast.makeText(this, result.toString(), Toast.LENGTH_SHORT).show();
+            boolean pizzaIsSelected = binding.checkBox1Cb.isChecked();
+            boolean coffeeIsSelected = binding.checkBox2Cb.isChecked();
+            boolean burgerIsSelected = binding.checkBox3Cb.isChecked();
+            boolean samosaIsSelected = binding.checkBox4Cb.isChecked();
+            String orderDetails = createOrder (pizzaIsSelected, coffeeIsSelected, burgerIsSelected, samosaIsSelected);
+            Toast.makeText(this, orderDetails, Toast.LENGTH_SHORT).show();
         });
+    }
+
+    private String createOrder(boolean pizzaIsSelected, boolean coffeeIsSelected, boolean burgerIdSelected, boolean samosaIsSelected) {
+            int total = 0;
+            String orderDetails = "Selecetd Items";
+            if(pizzaIsSelected) {
+                total += 100;
+                orderDetails += "\nPizza : rs100";
+            }
+
+            if(coffeeIsSelected) {
+                total += 50;
+                orderDetails += "\nCoffee : rs50";
+            }
+
+            if(burgerIdSelected) {
+                total += 25;
+                orderDetails += "\nburger : rs25";
+            }
+
+            if(samosaIsSelected) {
+                total += 10;
+                orderDetails += "\nsamosa: rs10";
+            }
+            orderDetails += "\nTotal : rs. " + total;
+            return orderDetails;
     }
 }
