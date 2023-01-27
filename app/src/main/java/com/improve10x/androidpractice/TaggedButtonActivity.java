@@ -11,8 +11,6 @@ import com.improve10x.androidpractice.databinding.ActivityTaggedButtonBinding;
 public class TaggedButtonActivity extends AppCompatActivity {
 
     private ActivityTaggedButtonBinding binding;
-    private ToggleButton toggleButton;
-    private ToggleButton toggleButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +24,15 @@ public class TaggedButtonActivity extends AppCompatActivity {
         binding.submitBtn.setOnClickListener(view -> {
             String status1 = binding.toggleButtonBtn.getText().toString();
             String status2 = binding.toggleButton2Btn.getText().toString();
-            Toast.makeText(this, "toggleButton1 " + status1 + "/ntoggleButton2 " + status2 , Toast.LENGTH_SHORT).show();
+            String result = getData(status1, status2);
+            Toast.makeText(this, result , Toast.LENGTH_SHORT).show();
         });
+    }
+
+    private String getData(String status1, String status2) {
+        String status1Check = "button1 : " + status1 + "\n";
+        String status2Check = "button2 : " + status2;
+        String result = status1Check += status2Check;
+        return  result;
     }
 }
