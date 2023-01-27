@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.improve10x.androidpractice.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
     private ActivityMainBinding binding;
 
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         handleProgressbar();
         handleVerticalScrollView();
         handleHorizontalScrollbar();
+        handleListview();
+        handleCustomListview();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -117,6 +120,20 @@ public class MainActivity extends AppCompatActivity {
     private void handleHorizontalScrollbar() {
         binding.horizontalSb.setOnClickListener(view -> {
             Intent intent = new Intent(this, HorizontalScrollviewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleListview() {
+        binding.listviewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ListviewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleCustomListview() {
+        binding.cutomListViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, CustomListviewActivity.class);
             startActivity(intent);
         });
     }

@@ -13,6 +13,20 @@
         android:theme="@style/Theme.AndroidPractice"
         tools:targetApi="31">
         <activity
+            android:name=".CustomListviewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ListviewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".HorizontalScrollviewActivity"
             android:exported="false">
             <meta-data

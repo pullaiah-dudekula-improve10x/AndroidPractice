@@ -123,6 +123,23 @@
                 android:layout_marginTop="14dp"
                 android:text="Horizontal Scrollbar"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/listview_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Listview"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/cutom_list_view_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Custom Listview"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 
