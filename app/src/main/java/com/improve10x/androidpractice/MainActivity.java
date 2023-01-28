@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         handleHorizontalScrollbar();
         handleListview();
         handleCustomListview();
+        handleAlertDialogBox();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -134,6 +135,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleCustomListview() {
         binding.cutomListViewBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CustomListviewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleAlertDialogBox() {
+        binding.alertDialgBoxBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, AlertDialogBoxActivity.class);
             startActivity(intent);
         });
     }
