@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         handleListview();
         handleCustomListview();
         handleAlertDialogBox();
+        handleProgressDialog();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -142,6 +143,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleAlertDialogBox() {
         binding.alertDialgBoxBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, AlertDialogBoxActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleProgressDialog() {
+        binding.progressDialogBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ProgressDialogActivity.class);
             startActivity(intent);
         });
     }

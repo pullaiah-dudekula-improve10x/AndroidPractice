@@ -148,6 +148,14 @@
                 android:text="Alert Dialo Box"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/progress_dialog_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Progress Dialog"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 
