@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         handleAlertDialogBox();
         handleProgressDialog();
         handleWebView();
+        handleSpinner();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -158,6 +159,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleWebView() {
         binding.webViewBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, WebViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleSpinner() {
+        binding.spinnerBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SpinnerActivity.class);
             startActivity(intent);
         });
     }
