@@ -172,6 +172,14 @@
                 android:text="spinner"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/custom_alert_dialog_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="custom Alert Dialog"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 
