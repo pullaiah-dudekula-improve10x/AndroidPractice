@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         handleWebView();
         handleSpinner();
         handleCustomAlertDialog();
+        handleSearchView();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -174,6 +175,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleCustomAlertDialog() {
         binding.customAlertDialogBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CustomAlertDialogActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleSearchView() {
+        binding.searchViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SearchViewActivity.class);
             startActivity(intent);
         });
     }

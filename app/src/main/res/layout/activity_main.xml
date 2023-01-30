@@ -180,6 +180,14 @@
                 android:text="custom Alert Dialog"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/search_view_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Search view"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 
