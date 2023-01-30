@@ -188,6 +188,14 @@
                 android:text="Search view"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/textwatcher_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Text watcher"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 

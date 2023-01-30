@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         handleSpinner();
         handleCustomAlertDialog();
         handleSearchView();
+        handleTextWatcher();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -182,6 +183,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleSearchView() {
         binding.searchViewBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, SearchViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleTextWatcher() {
+        binding.textwatcherSp.setOnClickListener(view -> {
+            Intent intent = new Intent(this, TextWatcherActivity.class);
             startActivity(intent);
         });
     }
