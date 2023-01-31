@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         handleCustomAlertDialog();
         handleSearchView();
         handleTextWatcher();
+        toolBarSearch();
     }
     private void handleButton() {
         binding.buttons.setOnClickListener(view -> {
@@ -190,6 +191,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleTextWatcher() {
         binding.textwatcherSp.setOnClickListener(view -> {
             Intent intent = new Intent(this, TextWatcherActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void toolBarSearch() {
+        binding.toolBarSearchBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ToolbarSearchActivity.class);
             startActivity(intent);
         });
     }
